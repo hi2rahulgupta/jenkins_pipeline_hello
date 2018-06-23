@@ -14,3 +14,12 @@ node {
         echo "deploying"
     }
 }
+
+stage('Deploy approval'){
+    input "Deploy to QA?"
+}
+node {
+    stage('deploy to QA'){
+        echo "deploying"
+    }
+}
